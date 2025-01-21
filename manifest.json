@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "ChatGPT Scroll Fix",
+  "version": "1.0",
+  "description": "Modifies a specific line of HTML to enable scrolling the chat.",
+  "permissions": ["activeTab", "https://chatgpt.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"  // Ensure script runs after the page has loaded
+    }
+  ]
+}
